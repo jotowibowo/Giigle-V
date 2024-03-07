@@ -1,0 +1,14 @@
+git --version
+git init
+git config --global user.name "julianto wibowo"
+git config --global user.email "juliantowibowo@yahoo.com"
+git config --global --list
+
+git remote add "jul_project" "https://github.com/jotowibowo/pakcat.git"
+--git remote remove "jul_bragajul"
+--git remote set-url "jul_project" "https://github.com/jotowibowo/didaktika.git"
+git remote -v
+
+git pull jul_project codespace-jotowibowo-didactic-train-g6xgp9jx45v2wqxv
+git branch --list
+git branch development
