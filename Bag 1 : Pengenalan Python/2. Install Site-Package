@@ -1,21 +1,46 @@
 Materi pelajaran selanjutnya adalah menginstall site-package, namun sebelumnya perlu dicek terlebih dahulu site-packege yang telah terinstall dalam jupyter notebook.
 cara dengan ketik : pip list
 hasilnya sebagai berikut :
-Package                            Version
----------------------------------- --------------------
-alabaster                          0.7.12
-anaconda-client                    1.9.0
-anaconda-navigator                 2.1.1
-anaconda-project                   0.10.1
-anyio                              2.2.0
-appdirs                            1.4.4
-argh                               0.26.2
-argon2-cffi                        20.1.0
-arrow                              0.13.1
-asn1crypto                         1.4.0
-astroid                            2.6.6
-astropy                            4.3.1
-async-generator                    1.10
-atomicwrites                       1.4.0
-...                                ...
+    Package                            Version
+    ---------------------------------- --------------------
+    alabaster                          0.7.12
+    anaconda-client                    1.9.0
+    anaconda-navigator                 2.1.1
+    anaconda-project                   0.10.1
+    anyio                              2.2.0
+    appdirs                            1.4.4
+    argh                               0.26.2
+    argon2-cffi                        20.1.0
+    arrow                              0.13.1
+    asn1crypto                         1.4.0
+    astroid                            2.6.6
+    astropy                            4.3.1
+    async-generator                    1.10
+    atomicwrites                       1.4.0
+    ...                                ...
+
+jika ingin melihat detail dari setiap site-package, ketik : pip show pandas
+hasilnya :
+    Name: pandas
+    Version: 1.3.4
+    Summary: Powerful data structures for data analysis, time series, and statistics
+    Home-page: https://pandas.pydata.org
+    Author: The Pandas Development Team
+    Author-email: pandas-dev@python.org
+    License: BSD-3-Clause
+    Location: c:\users\00120878\anaconda3\lib\site-packages
+    Requires: numpy, python-dateutil, pytz
+    Required-by: linearmodels, pyreadstat, scorecardpy, seaborn, sidetable, statsmodels
+    Note: you may need to restart the kernel to use updated packages.
+
+untuk menambah list bisa dilakukan dengan cara install new site-package dengan ketik : pip install site-package
+jika hasilnya muncul seperti dibawah ini maka install-nya gagal yang kemungkinan karena koneksi internet, pembatasan akses oleh Admin, atau old version.
+    ^bNote: you may need to restart the kernel to use updated packages.^b
+selanjutnya bisa dicoba cara kedua, yaitu didownload terlebih dahulu file site-package nya melalui link : https://pypi.org/
+kemudian cari site-package yang kita butuhkan lalu download ke dalam folder yang diinginkan. 
+nanti untuk jenis file-nya ada 2 macam : filename.version.tar.gz ; filename.version.whl gunakan salah satu aja dengan cara ketik : pip install /folder/filename.version.tar.gz 
+
+
+
+
 
