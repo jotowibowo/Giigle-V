@@ -1,1 +1,126 @@
+List adalah tipe data kolektif yang disimpan secara urut dan bisa diubah nilainya.
+penampakan list yang berwujud numerik : 
+  list_1 = [10, 70, 20]
+penampakan list yang berwujud karakter :
+  list_2 = ['ab','cd','hi','ca']
 
+untuk list yang berupa nomer urut dapat menggunakan fungsi list() dengan ketik :
+  list_1 = list(range(0, 10))
+  print(list_1)
+  # output ➜ [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+range bisa juga dimulai dari angka 1 s/d 21 dengan interval penambahan 3, ketik :
+  list_2 = list(range(0, 22, 3))
+  print(list_2)
+  # output ➜ [0, 3, 6, 9, 12, 15, 18, 21]
+range bisa juga dimulai dari angka 100 s/d 10 dengan interval pengurangan -10, ketik :
+  list_3 = list(range(100, 0, -10))
+  print(list_3)
+  # output ➜ [100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
+fungsi list() dapat juga digunakan untuk konversi string :
+  alphabets = list('abcdefgh')
+  print(alphabets)
+  # output ➜ ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+perbedaan tuple danlist terletak pada jenis tanda kurungnya :
+tuple menggunakan ()
+list menggunakan []
+pada contoh dibawah, tuple dapat dikonversi menjadi list :
+  tuple_1 = (1, 2, 3, 4)
+  numbers = list(tuple_1)
+  print(numbers)
+  # output ➜ [1, 2, 3, 4]
+
+elemen pada list dapat diuraikan melalui index :
+  list_1 = [10, 70, 20]
+  elem_1st = list_1[0]
+  elem_2nd = list_1[1]
+  elem_3rd = list_1[2]
+  print(elem_1st, elem_2nd, elem_3rd)
+  # output ➜ [10, 70, 20]
+elemen pada list dapat di slice, seperti pada contoh dibawah slice nya pada index 1 sampai elemen ke 3 :
+  list_2 = ['ab', 'cd', 'hi', 'ca']
+  slice_1 = list_2[1:3]
+  print('slice_1:', slice_1)
+  # output ➜ slice_1: ['cd', 'hi']
+merubah nilai elemen :
+  list_2 = ['ab', 'cd', 'hi', 'ca']
+  list_2[1] = 'zk'
+  list_2[2] = 'sa'
+  print('after: ', list_2)
+  # output ➜ after: ['ab', 'zk', 'sa', 'ca']
+append nilai elemen :
+cara 1 :
+  list_1 = [10, 70, 20]
+  list_1.append(88)
+  list_1.append(87)
+  print('after: ', list_1)
+  # output ➜ after : [10, 70, 20, 88, 87]
+cara 2 :
+  list_1 = [10, 70, 20]
+  list_1[len(list_1):] = [88, 87]
+  print('after: ', list_1)
+  # output ➜ after : [10, 70, 20, 88, 87]
+penggabungan 2 list :
+cara 1 :
+  list_1 = [10, 70, 20]
+  list_2 = [88, 87]
+  list_1.extend(list_2)
+  print(list_1)
+  # output ➜ [10, 70, 20, 88, 87]
+cara 2 :
+  list_1 = [10, 70, 20]
+  list_2 = [88, 87]
+  list_1[len(list_1):] = list_2
+  print(list_1)
+  # output ➜ [10, 70, 20, 88, 87]
+cara 3 :
+  list_1 = [10, 70, 20]
+  list_2 = [88, 77]
+  list_3 = list_1 + list_2
+  print(list_3)
+  # output ➜ [10, 70, 20, 88, 87]
+menyisipkan elemen baru pada posisi index = 0 :
+  list_3 = [10, 70, 20, 70]
+  list_3.insert(0, 15)
+  print(list_3)
+  # output ➜ [15, 10, 70, 20, 70]
+menghapus elemen dengan nilai tertentu :
+  list_3 = [10, 70, 20, 70]
+  list_3.remove(70)
+  print(list_3)
+  # output ➜ [10, 20, 70]
+menghapus elemen dalam range pada index 1 sampai urutan 3 :
+  list_3 = [10, 70, 20, 70]
+  del list_3[1:3]
+  print(list_3)
+  # output ➜ [10, 70]
+mengosongkan list :
+cara 1 :
+  list_1 = [10, 70, 20]
+  list_1.clear()
+  print(list_1)
+  # output ➜ []
+cara 2 :
+  list_1 = [10, 70, 20]
+  list_1 = []
+  print(list_1)
+  # output ➜ []
+cara 3 :
+  list_1 = [10, 70, 20]
+  del list_1[:]
+  print(list_1)
+  # output ➜ []
+membalikan posisi seluruh elemen pada list :
+  list_1 = [10, 70, 20]
+  list_1.reverse()
+  print(list_1)
+  # output ➜ [20, 70, 10]
+mencopy list :
+  list_1 = [10, 70, 20]
+  list_2 = list_1.copy()
+  print(list_2)
+  # output ➜ [10, 70, 20]
+mengurutkan list :
+  list_1 = [10, 70, 20]
+  list_1.sort()
+  print(list_1)
+  # output ➜ [10, 20, 70]
