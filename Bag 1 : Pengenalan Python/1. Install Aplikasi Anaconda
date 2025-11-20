@@ -8,6 +8,6 @@ Artinya : versi dari Aplikasi adalah 3.9
 Note : untuk aplikasi Anaconda disarankan untuk di upgrade secara berkala, karena aplikasi memerlukan site-package (akan dijelaskan pada pembahasan lebih lanjut) 
        yang diinstall secara kontinu. Untuk saat ini versi yang terbaru adalah 3.11 (Nov 2025).
 
-Untuk memulai script pertama, ketik pada baris In[] : print('Hello World')
+Untuk memulai script pertama, ketik pada baris -> In[] : print('Hello World') kemudian tekan [Shift] [Enter] untuk memproses.
 Responnya pada baris berikutnya : Hello World
 Yeay, selamat kamu berhasil dengan script python pertama-mu.
