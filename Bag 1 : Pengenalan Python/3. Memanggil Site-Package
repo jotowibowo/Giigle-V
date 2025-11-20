@@ -1,1 +1,26 @@
+Tujuannya memanggil site-package adalah sebagai library dari script python yang akan kita buat. Jadi untuk script yang kita buat juga bisa lebih singkat dan ringkas.
+sebagai contoh site-package Pandas, cara memanggilnya dengan ketik : import Pandas setelah itu klik pada [Shift] [Enter]. Jika tidak ada message error maka proses import berhasil.
+Jika error/tidak berhasil di import maka akan muncul message error seperti ini :
+    ---------------------------------------------------------------------------
+    ModuleNotFoundError                       Traceback (most recent call last)
+    ~\AppData\Local\Temp/ipykernel_14904/2457254733.py in <module>
+    ----> 1 import xgboost
+    
+    ModuleNotFoundError: No module named 'xgboost'
+jika ini muncul maka untuk pip install terhadap site-package tersebut harus diulang.
+
+apabila library tersebut memiliki sub-sub library maka untuk memanggilnya ada 2 cara :
+1. ketik : from sklearn import preprocessing
+   penggunaannya : scaler = preprocessing.StandardScaler()
+2. ketik : from sklearn.preprocessing import StandardScaler
+   penggunaannya : scaler = StandardScaler()
+
+memanggil library dengan menggunakan alias dengan cara ketik : import numpy as np
+penggunaannya : np.array()
+
+jika pada bagian ingin menampilkan df/table pada keseluruhan kolomnya pada row output dapat dilakukan dengan ketik : pd.set_option("display.max_columns", None)
+
+jika ingin menghilangkan warning message pada output dapat dilakukan dengan cara ketik :
+import warnings 
+warnings.filterwarnings('ignore')
 
