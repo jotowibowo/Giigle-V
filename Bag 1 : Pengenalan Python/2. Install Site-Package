@@ -1,1 +1,21 @@
+Materi pelajaran selanjutnya adalah menginstall site-package, namun sebelumnya perlu dicek terlebih dahulu site-packege yang telah terinstall dalam jupyter notebook.
+cara dengan ketik : pip list
+hasilnya sebagai berikut :
+Package                            Version
+---------------------------------- --------------------
+alabaster                          0.7.12
+anaconda-client                    1.9.0
+anaconda-navigator                 2.1.1
+anaconda-project                   0.10.1
+anyio                              2.2.0
+appdirs                            1.4.4
+argh                               0.26.2
+argon2-cffi                        20.1.0
+arrow                              0.13.1
+asn1crypto                         1.4.0
+astroid                            2.6.6
+astropy                            4.3.1
+async-generator                    1.10
+atomicwrites                       1.4.0
+...                                ...
 
