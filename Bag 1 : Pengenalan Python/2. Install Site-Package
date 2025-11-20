@@ -35,7 +35,7 @@ hasilnya :
 
 untuk menambah list bisa dilakukan dengan cara install new site-package dengan ketik : pip install site-package
 jika hasilnya muncul seperti dibawah ini maka install-nya gagal yang kemungkinan karena koneksi internet, pembatasan akses oleh Admin, atau old version.
-    ^bNote: you may need to restart the kernel to use updated packages.^b
+    <b>Note: you may need to restart the kernel to use updated packages.</b>
 selanjutnya bisa dicoba cara kedua, yaitu didownload terlebih dahulu file site-package nya melalui link : https://pypi.org/
 kemudian cari site-package yang kita butuhkan lalu download ke dalam folder yang diinginkan. 
 nanti untuk jenis file-nya ada 2 macam : filename.version.tar.gz ; filename.version.whl gunakan salah satu aja dengan cara ketik : pip install /folder/filename.version.tar.gz 
