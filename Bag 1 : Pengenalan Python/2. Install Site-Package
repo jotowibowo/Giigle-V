@@ -19,7 +19,7 @@ hasilnya sebagai berikut :
     atomicwrites                       1.4.0
     ...                                ...
 
-jika ingin melihat detail dari setiap site-package, ketik : pip show pandas
+jika ingin melihat detail dari setiap site-package, misalnya ketik : pip show pandas
 hasilnya :
     Name: pandas
     Version: 1.3.4
@@ -37,6 +37,6 @@ untuk menambah list bisa dilakukan dengan cara install new site-package dengan k
 jika hasilnya muncul seperti dibawah ini maka install-nya gagal yang kemungkinan karena koneksi internet, pembatasan akses oleh Admin, atau old version.
     Note: you may need to restart the kernel to use updated packages.
 selanjutnya bisa dicoba cara kedua, yaitu didownload terlebih dahulu file site-package nya melalui link : https://pypi.org/
-kemudian cari site-package yang kita butuhkan lalu download ke dalam folder yang diinginkan. 
+kemudian search site-package yang kita butuhkan lalu download ke dalam folder yang diinginkan. 
 nanti untuk jenis file-nya ada 2 macam : filename.version.tar.gz ; filename.version.whl gunakan salah satu aja dengan cara ketik : pip install /folder/filename.version.tar.gz 
-untuk install secara lokal bisa ketik : pip install /foldername/site-package
+untuk install secara lokal.
