@@ -1,0 +1,29 @@
+Untuk memulai sebelumnya import dulu site-package nya : import pandas as pd
+setelah itu baru import datanya :
+df = pd.read_csv(filename, delimiter=";")
+df = pd.read_excel(filename,sheet_name = sheet,skiprows=0)
+df = pd.read_sas(filename,format = 'sas7bdat', encoding="ISO-8859-1")
+
+untuk data yang diimport dari sqlite maka lakukan hal ini :
+import sqlite3
+my_conn = sqlite3.connect('D:/TheJobs/DB Lite/ebfi_base.db')
+df = pd.read_sql_query(sql,my_conn)
+
+untuk file json jika ingin diimport ke dalam bentuk df :
+import json
+dfjs = pd.read_json(filename, lines=True, typ='series')
+df = pd.json_normalize(dfjs)
+
+untuk export df ke excel caranya :
+df.to_excel(filename,sheet_name=sheet, index=False)
+untuk export df ke csv/txt :
+df.to_csv(filename, columns=['col1','col2',...,'coln'], sep=';', index=False)
+untuk export df menjadi table sqlite :
+df.to_sql(tabelname,my_conn,if_exists='replace',index=False)
+
+jika banyak df yang ingin di export kr excel :
+with pd.ExcelWriter(outfile) as writer:
+	df.to_excel(filename,sheet_name=sheet, index=False)
+  df1.to_excel(filename,sheet_name=sheet1, index=False)
+  ...
+  dfn.to_excel(filename,sheet_name=sheetn, index=False)
