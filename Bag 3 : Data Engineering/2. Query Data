@@ -1,1 +1,58 @@
+untuk select column2 tertentu pada df bisa dilakukan dengan cara : df[['col1','col2','col3',...,'coln']]
+sedangkan jika ingin melakukan drop column : df = df.drop(columns=['col1',...,'coln'])
+untuk distinct atau drop row duplicate dengan cara : df.drop_duplicates(inplace=True)
+untuk rename column : df = df.rename({'old1':'new1','old2':'new2',...,'oldn':'newn'},axis='columns')
+
+untuk query bisa dengan cara 
+cara 1 :
+df.query('col1 > 30 and col2 == "New York"')
+df.query('col1 > 30')
+df.query('col==val',inplace=True)
+cara 2:
+df[(df[col1]==val1) & (df[col3]>val3)]
+df[(df[col4]<=val4) | (~df[col5].isna())]
+df(df[col6].isin(val1,val2))]
+df.loc[df[col1].notnull()]
+
+untuk mencari top/limit 10 :
+df = df.head(1)
+untuk mencari bottom 10 :
+df = df.tail(1)
+
+membuat case when dan membuat column baru :
+df.loc[df["col1"].isnull(),"col_new"] = df["col2"]
+df.loc[df["col1"].notnull(),"col_new"] = 3
+df.loc[~df["col1"]=='NEW',"col_new"] >= df["col2"]
+
+sort column : df = df.sort_values(['col1','col2',...,'coln'])
+menjumlahkan beberapa column : df["col"] = df[["col1","col2",...,"coln"]].max(axis=1)
+
+untuk merge table :
+cara 1 :
+df = pd.merge(df1, df2, left_on=(['key1']), right_on=(['key2']), how='left')
+cara 2 :
+df = df1.merge(df2, left_on=(['key1']), right_on=(['key2']), how='left')
+
+bisa jg pake pd.concat sebagai perintah union :
+df = pd.concat([df1,df2],axis=0)
+merga jg bs pake concat jika kedua table key nya sama2 index
+df = pd.concat([df1,df2],axis=1)
+
+grouping table :
+df = df.groupby(['col1','col2',..,'coln']).sum()
+df.columns = df.columns.droplevel(0)
+df = df.reset_index()
+
+pivot table :
+cara 1:
+df = pd.pivot_table(df1, index = ['col1',...,'coln'],columns=['col2'],aggfunc= {'col3': 'sum'})
+cara 2 :
+df = df.groupby(["col1",..,"coln"],as_index=False).count().pivot("col1",...,"col2")
+
+bikin total column :
+df['index'] = pd.Series(df['col1'].sum(), index=['index'])
+
+
+
+
 
