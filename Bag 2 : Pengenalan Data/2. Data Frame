@@ -9,15 +9,43 @@ contoh :
          ] 
 untuk mengubah data menjadi df dapat dilakukan seperti ini :
   import pandas as pd
-  df = pd.DataFrame(data, columns=['grp','Ratio/Value','Frequency','Total'])
+  df = pd.DataFrame(data, columns=['grp','Ratio/Value','Frequency','Total','Trade','Manu','Service','FactorScore'])
 untuk melihat hasil df dapat ketik :
   df or print(df)
 
 cara lain untuk merubah data menjadi df :  
-  data = [
-          'grp' : ['01','<0.20',0,0.00,0.00,0.00,0.00,10],
-          'Ratio/Value' : ['02','<0.56',5,0.0450,0.00,0.0370,0.1111,8.2],
-          'Frequency' : ['03','<0.92',10,0.0901,0.0333,0.1296,0.0741,6.4],
-          'Total' : ['04','<1.28',37,0.3333,0.4000,0.3889,0.1481,4.6]
-         ] 
+  data = {
+          'grp' : ['01','02','03','04'],
+          'Ratio/Value' : ['<0.20','<0.56','<0.92','<1.28'],
+          'Frequency' : [0,5,10,37],
+          'Total' : [0.00,0.0450,0.0901,0.4000]
+         } 
   df = pd.DataFrame(data=data)         
+
+cara mengkonversi kembali dr column df ke list : df.col1.to_list()
+jika ingin mengubah keseluruhan df menjadi string : df.to_string()
+
+merubah data type column df :
+df['col1'] = df['col1'].astype('int')
+df['col1'] = df['col1'].astype('str')
+df['col1'] = df['col1'].astype('float')
+
+menampilkan df dalam bentuk html : display(HTML(df.to_html()))
+ingin merubah data type menjadi datetime : df = pd.to_datetime(df,format="%Y%m")
+merubah datetime menjadi day week : df.loc[df['col'].dt.dayofweek
+memisahkan hari pada tanggal : df.loc[df['col'].dt.days
+
+memotong/memenggal value dalam column :
+cara 1 :
+df['col2'] = df['col1'].str.slice(s0,s1)
+cara 2 :
+df['col2'] = df['col1'].str[s0:s1]
+
+mengganti karakter dalam column : df['col2'] = df['col1'].astype(str).apply(lambda x: x.replace('.0',''))
+
+mengisi cell kosong (N/A) dalam kolom
+mengisi cell kosong dengan nilai 0 : df["col1"] = df["col1"].fillna(0)
+mengisi cell kosong dengan karakter : df["col1"] = df["col1"].fillna('ada')
+mengisi cell kosong dengan nilai row yang diatasnya : df = df.fillna(method='ffill')
+mengisi cell kosong dengan nilai row yang dibawahnya : df = df.fillna(method='lfill')
+menyamakan panjang karakter dalam kolom dengan cara mengisinya dengan nilai 0 didepannya sebanyak 2 digit : df['col2'] = df['col1'].str.zfill(2)
