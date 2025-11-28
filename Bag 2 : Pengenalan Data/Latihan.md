@@ -18,7 +18,7 @@ Ada tabel demografik sbb :
 
 8. Buatkan skrip python untuk membuat df dari tabel diatas.
 9. Tolong print cell yang berisikan value 'Charlie' dan 'London'
-10. Coba lakukan pip install untuk beberapa site-package berikut :
+10. Buatkan kolom baru yang berisikan nama alias dari kolom nama yang merupakan penggalan kata huruf ke 2 sebanyak 2 karakter. Contoh : 'Alice' -> 'li'
 
 > [!TIP]
 > Kerjakan dari soal yang mudah terlebih dahulu.
