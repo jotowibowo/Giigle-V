@@ -19,7 +19,7 @@ Ada tabel demografik sbb :
 6. Buatkan skrip python untuk membuat df dari tabel diatas.
 7. Tolong print cell yang berisikan value 'Charlie' dan 'London'
 8. Buatkan kolom baru yang berisikan nama alias dari kolom nama yang merupakan penggalan kata huruf ke 2 sebanyak 2 karakter. Contoh : 'Alice' -> 'li'
-9. 
+9. Tolong di masking untuk semua huruf yang ditengah-tengah dengan huruf x. Contoh : 'Charlie' -> 'Cxxxxxe'
 10. 
 
 > [!TIP]
