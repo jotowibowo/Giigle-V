@@ -20,7 +20,7 @@ Ada tabel demografik sbb :
 7. Tolong print cell yang berisikan value 'Charlie' dan 'London'
 8. Buatkan kolom baru yang berisikan nama alias dari kolom nama yang merupakan penggalan kata huruf ke 2 sebanyak 2 karakter. Contoh : 'Alice' -> 'li'
 9. Tolong di masking untuk semua huruf yang ditengah-tengah dengan huruf x. Contoh : 'Charlie' -> 'Cxxxxxe'
-10. 
+10. Buatkan skrip untuk mengambil row pada index=2.
 
 > [!TIP]
 > Kerjakan dari soal yang mudah terlebih dahulu.
