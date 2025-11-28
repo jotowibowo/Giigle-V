@@ -1,6 +1,6 @@
 # Latihan
 
-1. Apa tujuan dari belajar Bahasa pemrograman python?
+1. Buatkan list yang dimulai dari angka 100 s/d 1000 dengan kelipatan 20.
 2. Apa beda yang mendasar antara aplikasi jupyter notebook dengan visual studio code dalam hal mengeksekusi kode python?
 3. Apakah bisa Anaconda 32 bit di install pada windows 64 bit?
 4. Buatkan contoh skrip python untuk perhitungan matematis sederhana.
