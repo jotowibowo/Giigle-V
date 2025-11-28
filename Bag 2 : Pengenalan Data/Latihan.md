@@ -16,20 +16,9 @@ Ada tabel demografik sbb :
 |1 |    Bob|   30|   London|
 |2 |Charlie|   22|    Paris|
 
-8. Apa fungsi dari syntax import?
-9. Jelaskan maksud dari from sklearn import preprocessing
+8. Buatkan skrip python untuk membuat df dari tabel diatas.
+9. Tolong print cell yang berisikan value 'Charlie' dan 'London'
 10. Coba lakukan pip install untuk beberapa site-package berikut :
-<ul>
-  - xgboost</br>
-  - plotly</br>
-  - keras</br>
-</ul>
-10. Coba lakukan pip install secara local untuk beberapa site-package berikut :
-<ul>
-  - Scorecardpy</br>
-  - Graphviz</br>
-  - sidetable</br>
-</ul>
 
 > [!TIP]
 > Kerjakan dari soal yang mudah terlebih dahulu.
